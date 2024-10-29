@@ -22,6 +22,7 @@
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.icons.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 
@@ -388,99 +389,500 @@
                             </div>
                         </div>
                     </section>
+
                     <section class="site-title">
                         <h2>We are the Best Free Prediction Site for Football in the world.</h2>
                     </section>
-                    
-                 </section>
 
-                 <section class="sidebar-extra">
-                    <section class="calendar-cont">
-                        <div class="date_main-placeholder hasDatepicker" id="dp1729947405777">
-                            <div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;">
-                                <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all">
-                                    <a class="ui-datepicker-prev ui-corner-all ui-state-disabled" title="">
-                                        <span class="ui-icon ui-icon-circle-triangle-w"></span>
+                    <section class="mobile-sidebar-links">
+                        <div class="mobile-sidebar-links_list">
+                            <ul class="list-unstyled">
+                                <li class="mb-3">
+                                    <a href="/predictions" class="d-flex align-items-center">
+                                        <span class="icon-cont me-2">
+                                            <i class="fas fa-futbol"></i>
+                                        </span>
+                                        <span class="label">All Prediction</span>
                                     </a>
-                                    <a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title=""><span class="ui-icon ui-icon-circle-triangle-e"></span>
+                                </li>
+                                
+                                <li class="mb-3">
+                                    <a href="/prediction" class="d-flex align-items-center">
+                                        <span class="icon-cont me-2">
+                                            <i class="fas fa-star"></i>
+                                        </span>
+                                        <span class="label">Premium</span>
                                     </a>
-                                    <div class="ui-datepicker-title">
-                                        <span class="ui-datepicker-month">October</span>&nbsp;<span class="ui-datepicker-year">2024</span>
+                                </li>
+                                
+                                <li class="mb-3">
+                                    <a href="/predictions" class="d-flex align-items-center">
+                                        <span class="icon-cont me-2">
+                                            <i class="fas fa-gift"></i>
+                                        </span>
+                                        <span class="label">Super-pack</span>
+                                    </a>
+                                </li>
+                                
+                                <li class="mb-3">
+                                    <a href="/pricing" class="d-flex align-items-center">
+                                        <span class="icon-cont me-2">
+                                            <i class="fas fa-dollar-sign"></i>
+                                        </span>
+                                        <span class="label">Pricing</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="match-list predictions">
+                        <div class="match-filter">
+                            <div class="row">
+                                <div class="col-4 col-md-6 mb-3">
+                                    <span class="drinksparty-invoice__date_placeholder">
+                                        <a href="#" class="text-center nav-link nav-calendar">
+                                            <input type="date" id="datePickers" class="form-control">
+                                        </a>
+                                    </span>
+                                </div>
+                                
+                                <!-- League Filter Column -->
+                                <div class="col-8 col-md-6 mb-3 match-sort-list">
+                                    <div class="sort-options">
+                                        <select class="form-control form-select" id="leagueFilter">
+                                            <option value="all">All Predictions</option>
+                                            <option value="308">Lithuania 1 Lyga</option>
+                                            <option value="209">Denmark 1. Division</option>
+                                            <!-- More league options here -->
+                                        </select>
+                                    </div>
+                                    <div class="sort-options">
+                                        <select class="form-control form-select" id="oddsFilter">
+                                            <option value="all">All Odds</option>
+                                            <option value="1.1">Above 1.1</option>
+                                            <option value="1.2">Above 1.2</option>
+                                            <!-- More odds options here -->
+                                        </select>
                                     </div>
                                 </div>
-                                <table class="ui-datepicker-calendar">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col" class="ui-datepicker-week-end"><span title="Sunday">Su</span></th>
-                                            <th scope="col"><span title="Monday">Mo</span></th>
-                                            <th scope="col"><span title="Tuesday">Tu</span></th>
-                                            <th scope="col"><span title="Wednesday">We</span></th>
-                                            <th scope="col"><span title="Thursday">Th</span></th>
-                                            <th scope="col"><span title="Friday">Fr</span></th>
-                                            <th scope="col" class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
-                                            <td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
-                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">1</span></td>
-                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">2</span></td>
-                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">3</span></td>
-                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">4</span></td>
-                                            <td class="ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">5</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">6</span></td>
-                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">7</span></td>
-                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">8</span></td>
-                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">9</span></td>
-                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">10</span></td>
-                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">11</span></td>
-                                            <td class="ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">12</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">13</span></td>
-                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">14</span></td>
-                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">15</span></td>
-                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">16</span></td>
-                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">17</span></td>
-                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">18</span></td>
-                                            <td class="ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">19</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">20</span></td>
-                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">21</span></td>
-                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">22</span></td>
-                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">23</span></td>
-                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">24</span></td>
-                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">25</span></td>
-                                            <td class="ui-datepicker-week-end ui-datepicker-days-cell-over ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="9" data-year="2024">
-                                                <a class="ui-state-default ui-state-highlight ui-state-active" href="#" aria-current="true" data-date="26">26</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2024">
-                                                <a class="ui-state-default" href="#" aria-current="false" data-date="27">27</a>
-                                            </td>
-                                            <td class="" data-handler="selectDay" data-event="click" data-month="9" data-year="2024">
-                                                <a class="ui-state-default" href="#" aria-current="false" data-date="28">28</a>
-                                            </td>
-                                            <td class="" data-handler="selectDay" data-event="click" data-month="9" data-year="2024">
-                                                <a class="ui-state-default" href="#" aria-current="false" data-date="29">29</a>
-                                            </td>
-                                            <td class="" data-handler="selectDay" data-event="click" data-month="9" data-year="2024">
-                                                <a class="ui-state-default" href="#" aria-current="false" data-date="30">30</a>
-                                            </td>
-                                            <td class="" data-handler="selectDay" data-event="click" data-month="9" data-year="2024">
-                                                <a class="ui-state-default" href="#" aria-current="false" data-date="31">31</a>
-                                            </td>
-                                            <td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
-                                            <td class="ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            </div>                      
+
+                            <div class="match-tab-list">
+                                <nav class="nav nav-pills flex-row">
+                                    <a class="flex-fill text-center nav-link" data-bs-toggle="tab" href="#yesterday" role="tab">Yesterday's Predictions</a>
+                                    <a class="flex-fill text-center nav-link active" data-bs-toggle="tab" href="#today" role="tab">Today's Predictions</a>
+                                    <a class="flex-fill text-center nav-link" data-bs-toggle="tab" href="#tomorrow" role="tab">Tomorrow's Predictions</a>
+                                </nav>
                             </div>
+                        </div>
+                        
+                        <div class="tab-content">
+                            <!-- Yesterday's Predictions -->
+                            <div class="tab-pane fade" id="yesterday" role="tabpanel">
+                                <div class="section-title my-4 text-center">
+                                    <h3 class="font-weight-bold">Football Predictions for Yesterday</h3>
+                                    <a href="/" class="mt-2">See All</a>
+                                </div>
+
+                                <div class="predicition-table_cont">                            
+                                    <div class="prediction-table" data-league="308" data-odds="1.75" data-date="2024-10-28">
+                                        <div class="d-flex justify-content-center" style="align-items: center;">
+                                            <div class="PredictionsTable_predictionTitle">
+                                                <p class="PredictionsTable_predictionTitleItem__PV5Qh" style="color:#252525 !important;">
+                                                    Premier Soccer League - 18:30 Sekhukhune United v Richards Bay Prediction
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <a href="/accuratepredict" class="btn btn-secondary btn-sm" target="_blank">
+                                                    Bet
+                                                </a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="text-dark PredictionsTable_gridContainer pb-0" style="display: block; text-align:center;">
+                                            <div class="row mob">
+                                                <div class="col-4">
+                                                    <img src="https://media.api-sports.io/football/teams/15537.png" class="img-fluid"><br>
+                                                    <strong class="text-xs" style="font-weight:500;">Sekhukhune United</strong>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p style="margin:0; padding:0;">
+                                                        <strong style="padding:5px; height:20px; width:100%;"> : </strong>
+                                                    </p>
+                                                    <a href="#" class="badge" style="text-transform: none; padding:5px; background:  #223F94; font-size:13px;">
+                                                        Under 1.5 HT
+                                                    </a><br>
+                                                    <p style="font-weight: bold;">Odds: <span style="color: green; padding:5px">1.75</span></p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <img src="https://media.api-sports.io/football/teams/10567.png" class="img-fluid"><br>
+                                                    <strong class="text-xs" style="font-weight:500;">Richards Bay</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- Today's Predictions -->
+                            <div class="tab-pane fade show active" id="today" role="tabpanel">
+                                <div class="section-title my-4 text-center">
+                                    <h3 class="font-weight-bold">Football Predictions for Today</h3>
+                                    <a href="javascript:void(0)" onclick="toggleMatches()" class="mt-2" id="seeAllBtn">See All</a>
+                                </div>
+                                
+                                <div class="predicition-table_cont">                            
+                                    <div class="prediction-table visible-match" data-league="308" data-odds="1.75" data-date="2024-10-29">
+                                        <div class="d-flex justify-content-center" style="align-items: center;">
+                                            <div class="PredictionsTable_predictionTitle">
+                                                <p class="PredictionsTable_predictionTitleItem__PV5Qh" style="color:#252525 !important;">
+                                                    Premier Soccer League - 18:30 Sekhukhune United v Richards Bay Prediction
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <a href="/accuratepredict" class="btn btn-secondary btn-sm" target="_blank">
+                                                    Bet
+                                                </a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="text-dark PredictionsTable_gridContainer pb-0" style="display: block; text-align:center;">
+                                            <div class="row mob">
+                                                <div class="col-4">
+                                                    <img src="https://media.api-sports.io/football/teams/15537.png" class="img-fluid"><br>
+                                                    <strong class="text-xs" style="font-weight:500;">Sekhukhune United</strong>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p style="margin:0; padding:0;">
+                                                        <strong style="padding:5px; height:20px; width:100%;"> : </strong>
+                                                    </p>
+                                                    <a href="#" class="badge" style="text-transform: none; padding:5px; background:  #223F94; font-size:13px;">
+                                                        Under 1.5 HT
+                                                    </a><br>
+                                                    <p style="font-weight: bold;">Odds: <span style="color: green; padding:5px">1.75</span></p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <img src="https://media.api-sports.io/football/teams/10567.png" class="img-fluid"><br>
+                                                    <strong class="text-xs" style="font-weight:500;">Richards Bay</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Match 2 -->
+                                    <div class="prediction-table visible-match" data-league="209" data-odds="1.55" data-date="2024-10-29">
+                                        <div class="d-flex justify-content-center" style="align-items: center;">
+                                            <div class="PredictionsTable_predictionTitle">
+                                                <p class="PredictionsTable_predictionTitleItem__PV5Qh" style="color:#252525 !important;">
+                                                    Denmark 1. Division - 15:00 Vendsyssel FF v HB Køge Prediction
+                                                </p>
+                                            </div>
+                                            <div><a href="/accuratepredict" class="btn btn-secondary btn-sm" target="_blank">Bet</a></div>
+                                        </div>
+                                        <div class="text-dark PredictionsTable_gridContainer pb-0" style="display: block; text-align:center;">
+                                            <div class="row mob">
+                                                <div class="col-4"><img src="https://media.api-sports.io/football/teams/3008.png" class="img-fluid"><br><strong class="text-xs" style="font-weight:500;">Vendsyssel FF</strong></div>
+                                                <div class="col-4"><p style="margin:0; padding:0;"><strong style="padding:5px;"> : </strong></p><a href="#" class="badge" style="padding:5px; background: #223F94; font-size:13px;">Over 2.5 FT</a><br><p style="font-weight: bold;">Odds: <span style="color: green;">1.55</span></p></div>
+                                                <div class="col-4"><img src="https://media.api-sports.io/football/teams/3010.png" class="img-fluid"><br><strong class="text-xs" style="font-weight:500;">HB Køge</strong></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Match 3 -->
+                                    <div class="prediction-table visible-match" data-league="308" data-odds="2.10" data-date="2024-10-29">
+                                        <div class="d-flex justify-content-center" style="align-items: center;">
+                                            <div class="PredictionsTable_predictionTitle">
+                                                <p class="PredictionsTable_predictionTitleItem__PV5Qh" style="color:#252525 !important;">
+                                                    Lithuania 1 Lyga - 14:00 FK Panevėžys B v Neptūnas Prediction
+                                                </p>
+                                            </div>
+                                            <div><a href="/accuratepredict" class="btn btn-secondary btn-sm" target="_blank">Bet</a></div>
+                                        </div>
+                                        <div class="text-dark PredictionsTable_gridContainer pb-0" style="display: block; text-align:center;">
+                                            <div class="row mob">
+                                                <div class="col-4"><img src="https://media.api-sports.io/football/teams/1508.png" class="img-fluid"><br><strong class="text-xs" style="font-weight:500;">FK Panevėžys B</strong></div>
+                                                <div class="col-4"><p style="margin:0; padding:0;"><strong style="padding:5px;"> : </strong></p><a href="#" class="badge" style="padding:5px; background: #223F94; font-size:13px;">Both Teams to Score</a><br><p style="font-weight: bold;">Odds: <span style="color: green;">2.10</span></p></div>
+                                                <div class="col-4"><img src="https://media.api-sports.io/football/teams/1509.png" class="img-fluid"><br><strong class="text-xs" style="font-weight:500;">Neptūnas</strong></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Match 4 -->
+                                    <div class="prediction-table visible-match" data-league="209" data-odds="1.65" data-date="2024-10-29">
+                                        <div class="d-flex justify-content-center" style="align-items: center;">
+                                            <div class="PredictionsTable_predictionTitle">
+                                                <p class="PredictionsTable_predictionTitleItem__PV5Qh" style="color:#252525 !important;">
+                                                    Denmark 1. Division - 17:30 Fredericia v Nykøbing Prediction
+                                                </p>
+                                            </div>
+                                            <div><a href="/accuratepredict" class="btn btn-secondary btn-sm" target="_blank">Bet</a></div>
+                                        </div>
+                                        <div class="text-dark PredictionsTable_gridContainer pb-0" style="display: block; text-align:center;">
+                                            <div class="row mob">
+                                                <div class="col-4"><img src="https://media.api-sports.io/football/teams/3009.png" class="img-fluid"><br><strong class="text-xs" style="font-weight:500;">Fredericia</strong></div>
+                                                <div class="col-4"><p style="margin:0; padding:0;"><strong style="padding:5px;"> : </strong></p><a href="#" class="badge" style="padding:5px; background: #223F94; font-size:13px;">Under 2.5 FT</a><br><p style="font-weight: bold;">Odds: <span style="color: green;">1.65</span></p></div>
+                                                <div class="col-4"><img src="https://media.api-sports.io/football/teams/3011.png" class="img-fluid"><br><strong class="text-xs" style="font-weight:500;">Nykøbing</strong></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Match 5 -->
+                                    <div class="prediction-table visible-match" data-league="308" data-odds="1.85" data-date="2024-10-29">
+                                        <div class="d-flex justify-content-center" style="align-items: center;">
+                                            <div class="PredictionsTable_predictionTitle">
+                                                <p class="PredictionsTable_predictionTitleItem__PV5Qh" style="color:#252525 !important;">
+                                                    Lithuania 1 Lyga - 19:00 Ekranas v Minija Prediction
+                                                </p>
+                                            </div>
+                                            <div><a href="/accuratepredict" class="btn btn-secondary btn-sm" target="_blank">Bet</a></div>
+                                        </div>
+                                        <div class="text-dark PredictionsTable_gridContainer pb-0" style="display: block; text-align:center;">
+                                            <div class="row mob">
+                                                <div class="col-4"><img src="https://media.api-sports.io/football/teams/1510.png" class="img-fluid"><br><strong class="text-xs" style="font-weight:500;">Ekranas</strong></div>
+                                                <div class="col-4"><p style="margin:0; padding:0;"><strong style="padding:5px;"> : </strong></p><a href="#" class="badge" style="padding:5px; background: #223F94; font-size:13px;">Draw FT</a><br><p style="font-weight: bold;">Odds: <span style="color: green;">1.85</span></p></div>
+                                                <div class="col-4"><img src="https://media.api-sports.io/football/teams/1511.png" class="img-fluid"><br><strong class="text-xs" style="font-weight:500;">Minija</strong></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Match 6 -->
+                                    <div class="prediction-table hidden-match" data-league="209" data-odds="2.00" data-date="2024-10-29">
+                                        <div class="d-flex justify-content-center" style="align-items: center;">
+                                            <div class="PredictionsTable_predictionTitle">
+                                                <p class="PredictionsTable_predictionTitleItem__PV5Qh" style="color:#252525 !important;">
+                                                    Denmark 1. Division - 20:00 Esbjerg v Vejle Prediction
+                                                </p>
+                                            </div>
+                                            <div><a href="/accuratepredict" class="btn btn-secondary btn-sm" target="_blank">Bet</a></div>
+                                        </div>
+                                        <div class="text-dark PredictionsTable_gridContainer pb-0" style="display: block; text-align:center;">
+                                            <div class="row mob">
+                                                <div class="col-4"><img src="https://media.api-sports.io/football/teams/3012.png" class="img-fluid"><br><strong class="text-xs" style="font-weight:500;">Esbjerg</strong></div>
+                                                <div class="col-4"><p style="margin:0; padding:0;"><strong style="padding:5px;"> : </strong></p><a href="#" class="badge" style="padding:5px; background: #223F94; font-size:13px;">Over 1.5 FT</a><br><p style="font-weight: bold;">Odds: <span style="color: green;">2.00</span></p></div>
+                                                <div class="col-4"><img src="https://media.api-sports.io/football/teams/3013.png" class="img-fluid"><br><strong class="text-xs" style="font-weight:500;">Vejle</strong></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- Tomorrow's Predictions -->
+                            <div class="tab-pane fade" id="tomorrow" role="tabpanel">
+                                <div class="section-title my-4 text-center">
+                                    <h3 class="font-weight-bold">Sure Prediction for Tomorrow's Match</h3>
+                                    <a href="/" class="mt-2">See All</a>
+                                </div>
+                                
+                                <div class="predicition-table_cont">                            
+                                    <div class="prediction-table" data-league="209" data-odds="2.00" data-date="2024-10-30">
+                                        <div class="d-flex justify-content-center" style="align-items: center;">
+                                            <div class="PredictionsTable_predictionTitle">
+                                                <p class="PredictionsTable_predictionTitleItem__PV5Qh" style="color:#252525 !important;">
+                                                    Premier Soccer League - 18:30 Sekhukhune United v Richards Bay Prediction
+                                                </p>
+                                            </div>
+                                            <div>
+                                                <a href="/accuratepredict" class="btn btn-secondary btn-sm" target="_blank">
+                                                    Bet
+                                                </a>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="text-dark PredictionsTable_gridContainer pb-0" style="display: block; text-align:center;">
+                                            <div class="row mob">
+                                                <div class="col-4">
+                                                    <img src="https://media.api-sports.io/football/teams/15537.png" class="img-fluid"><br>
+                                                    <strong class="text-xs" style="font-weight:500;">Sekhukhune United</strong>
+                                                </div>
+                                                <div class="col-4">
+                                                    <p style="margin:0; padding:0;">
+                                                        <strong style="padding:5px; height:20px; width:100%;"> : </strong>
+                                                    </p>
+                                                    <a href="#" class="badge" style="text-transform: none; padding:5px; background:  #223F94; font-size:13px;">
+                                                        Under 1.5 HT
+                                                    </a><br>
+                                                    <p style="font-weight: bold;">Odds: <span style="color: green; padding:5px">1.75</span></p>
+                                                </div>
+                                                <div class="col-4">
+                                                    <img src="https://media.api-sports.io/football/teams/10567.png" class="img-fluid"><br>
+                                                    <strong class="text-xs" style="font-weight:500;">Richards Bay</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="signup-for-more text-center">
+                            <div class="signup-for-more_cont" style="padding: 20px;">
+                                <h1 style="font-size: 24px; margin-bottom: 10px;">To See More Predictions</h1>
+                                <p style="font-size: 16px; margin-bottom: 20px;">
+                                    Login or create an account on Accurate Predict to see more predictions.
+                                </p>
+                                <div class="cta-action">
+                                    <a href="/login" class="btn btn-primary" style="margin-right: 10px;">Login</a>
+                                    <a href="/register" class="btn btn-warning">Signup</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </section>
+                    <br>
+                    <section class="recent-result">
+                        <div class="card" style="border: #000 1px solid;">
+                            <div class="card-body">
+                                <center>
+                                    <h3 style="font-size: 18px;">Recent Premium Results</h3>
+                                </center>
+                                <style>
+                                    .tyi span {
+                                        color: #b20;
+                                        padding: 5px;
+                                    }
+                                    .tablepress {
+                                        border-collapse: collapse;
+                                        border-spacing: 0;
+                                        width: 100%;
+                                        margin-bottom: 1em;
+                                        border: none;
+                                    }
+                                    .tablepress td,
+                                    .tablepress th {
+                                        padding: 8px;
+                                        border: none;
+                                        background: 0 0;
+                                        font-size: 13px;
+                                        text-align: left;
+                                    }
+                                    .text-red {
+                                        color: red;
+                                    }
+                                    .f50 {
+                                        font-size: 24px;
+                                    }
+                                </style>
+                        
+                                <div id="tablepress-405-scroll-wrapper" class="tablepress-scroll-wrapper">
+                                    <table id="tablepress-405" class="tablepress tablepress-id-405 tablepress-responsive table">
+                                        <thead>
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Odds</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>22 Oct</td>
+                                                <td>2.11 odds</td>
+                                                <td><i class="fa fa-check-circle text-success f50"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>20 Oct</td>
+                                                <td>2.05 odds</td>
+                                                <td><i class="fa fa-check-circle text-success f50"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>19 Oct</td>
+                                                <td>5.01 odds</td>
+                                                <td><i class="fa fa-check-circle text-success f50"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>18 Oct</td>
+                                                <td>2.00 odds</td>
+                                                <td><i class="fa fa-check-circle text-success f50"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>17 Oct</td>
+                                                <td>2.30 odds</td>
+                                                <td><i class="fa fa-times-circle text-danger f50"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>16 Oct</td>
+                                                <td>2.30 odds</td>
+                                                <td><i class="fa fa-check-circle text-success f50"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>15 Oct</td>
+                                                <td>2.20 odds</td>
+                                                <td><i class="fa fa-times-circle text-danger f50"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>14 Oct</td>
+                                                <td>2.45 odds</td>
+                                                <td><i class="fa fa-check-circle text-success f50"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>14 Oct</td>
+                                                <td>5.50 odds</td>
+                                                <td><i class="fa fa-check-circle text-success f50"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>11 Oct</td>
+                                                <td>2.30 odds</td>
+                                                <td><i class="fa fa-check-circle text-success f50"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>10 Oct</td>
+                                                <td>2.30 odds</td>
+                                                <td><i class="fa fa-check-circle text-success f50"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>09 Oct</td>
+                                                <td>4.40 odds</td>
+                                                <td><i class="fa fa-check-circle text-success f50"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>08 Oct</td>
+                                                <td>5.50 odds</td>
+                                                <td><i class="fa fa-check-circle text-success f50"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>07 Oct</td>
+                                                <td>2.40 odds</td>
+                                                <td><i class="fa fa-check-circle text-success f50"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>06 Oct</td>
+                                                <td>6.20 odds</td>
+                                                <td><i class="fa fa-check-circle text-success f50"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>05 Oct</td>
+                                                <td>2.07 odds</td>
+                                                <td><i class="fa fa-check-circle text-success f50"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>04 Oct</td>
+                                                <td>5.30 odds</td>
+                                                <td><i class="fa fa-check-circle text-success f50"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>03 Oct</td>
+                                                <td>2.20 odds</td>
+                                                <td><i class="fa fa-times-circle text-danger f50"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <td>02 Oct</td>
+                                                <td>2.20 odds</td>
+                                                <td><i class="fa fa-times-circle text-danger f50"></i></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </section>
+                 </section>
+
+                 <!--extra -->
+                 <section class="sidebar-extra">
+                    <section class="calendar-cont">
+                        <div class="date_main-placeholder" id="idcalendar">
+                            <!-- Initialize the datepicker on the #idcalendar div-->
                         </div>
                     </section>
 
@@ -594,25 +996,35 @@
             </div>
         </div>
     </div>
-    
-    <script>
-    //     $(document).ready(function() {
-    //     $("#dp1729947405777").datepicker({
-    //         inline: true,
-    //         onSelect: function(dateText) {
-    //             console.log("Selected date: " + dateText);
-    //         }
-    //     });
 
-    //     $(document).on("click", ".ui-datepicker-next", function() {
-    //         console.log("Next button clicked");
-    //     });
-    // });
-    </script>    
+
+
+
+    
+<script>
+    $(document).ready(function () {
+        // Check if jQuery UI datepicker is loaded
+        if (typeof $.fn.datepicker !== 'undefined') {
+            // Initialize the datepicker on #idcalendar
+            $("#idcalendar").datepicker({
+                inline: true,
+                dateFormat: "dd/mm/yy",
+                showOtherMonths: true,
+                selectOtherMonths: true,
+                minDate: new Date(),
+                onSelect: function (dateText) {
+                    console.log("Selected date: " + dateText);
+                }
+            });
+        } else {
+            console.error("jQuery UI datepicker is not loaded.");
+        }
+    });
+</script>
 
 <script src="./assets/js/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <!-- Include jQuery and Select2 CSS/JS -->
