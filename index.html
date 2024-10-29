@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="stylesheet" href="./assets/css/root.css">
+<link rel="stylesheet" href="./assets/css/main.css">
+<title>AccuratePredict |  Best Free Prediction Site for Football in the world</title>
+<link rel="shortcut icon" href="./assets/images/logo.png"/>
+<!-- jQuery UI CSS -->
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.icons.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
+</head>
+
+
+
+<body data-bs-theme="light" style="padding-bottom: 42px;">
+    <header class="primary pt-2">
+        <nav class="navbar navbar-expand-lg primary-links">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavSecondary" aria-controls="navbarNavSecondary" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>                
+    
+                <a class="navbar-brand" href="/" data-cursor="menu">
+                    <img src="./assets/images/logo.png" alt="" style="max-width: 180px; margin-top: -8px;" class="logo">
+                </a>
+    
+                <div class="collapse navbar-collapse">
+                    <div class="navbar-nav ms-auto">
+                        <div class="navbar-cont">
+                            <div class="nav-item">
+                                <form action="/login" method="POST" class="d-flex" role="search">
+                                    <input type="hidden" name="_token" value="kQi0psDQ22SE70pcw3ZE1NU2DQBXx6kmgcbrcJTo">
+                                    <div class="input-group">
+                                        <input class="form-control me-2 sm" type="email" name="email" placeholder="Username / Email" aria-label="Email" required>
+                                        <input class="form-control me-2 sm" type="password" name="password" placeholder="Password" aria-label="Password" required>
+                                        <button class="btn btn-primary-inverted btn-sm" type="submit">Login</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="nav-item">
+                                <a href="/register" class="btn btn-warning-inverted btn-sm">Register</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="mobile-account">
+                    <a href="/login" class="account nav-link"><i class="fa fa-user-circle"></i></a>
+                </div>
+            </div>
+        </nav>
+    
+        <nav class="navbar navbar-expand-lg secondary">
+            <div class="container">
+                <div class="collapse navbar-collapse align-items-start" id="navbarNavSecondary">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="/" class="nav-link active">Home</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="predictionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Predictions
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="predictionsDropdown">
+                                <li><a class="dropdown-item" href="/today-football-predictions">Today's Predictions</a></li>
+                                <li><a class="dropdown-item" href="/tomorrow-football-predictions">Tomorrow's Predictions</a></li>
+                                <li><a class="dropdown-item" href="/predictions/straight-win">Straight Win</a></li>
+                                <li><a class="dropdown-item" href="/predictions/over-15-goals">Over 1.5 Goals</a></li>
+                                <li><a class="dropdown-item" href="/predictions/over-25-goals">Over 2.5 Goals</a></li>
+                                <li><a class="dropdown-item" href="/predictions/both-teams-to-score">Both Teams To Score</a></li>
+                                <li><a class="dropdown-item" href="/predictions/win-either-halves">Win Either Halves</a></li>
+                                <li><a class="dropdown-item" href="/predictions/draw">Draw</a></li>
+                                <li><a class="dropdown-item" href="/predictions/double-chance">Double Chance</a></li>
+                                <li><a class="dropdown-item" href="/predictions/under-35">Under 3.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="https://accuratepredict.com/accumulator-tips" class="nav-link">Premium VIP</a></li>
+                        <li class="nav-item"><a href="https://accuratepredict.com/betting-sites" class="nav-link">Super Pack</a></li>
+                        <li class="nav-item"><a href="https://accuratepredict.com/convert-bet-codes" class="nav-link">Recent Result</a></li>
+                        <li class="nav-item"><a href="https://accuratepredict.com/news" class="nav-link">News</a></li>
+                        <li class="nav-item"><a href="https://accuratepredict.com/vote-and-win" class="nav-link">Contact</a></li>
+                    </ul>
+    
+                    <!-- Theme Toggle -->
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown theme-mode">
+                            <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle icon-dropdown d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme">
+                                <i class="icon icon-Night"></i>
+                                <!-- <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span> -->
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                                <li><button type="button" class="dropdown-item d-flex align-items-center light active" data-bs-theme-value="light">Light</button></li>
+                                <li><button type="button" class="dropdown-item d-flex align-items-center dark" data-bs-theme-value="dark">Dark</button></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-cont">
+        <div class="container">
+            <div class="row">
+                <section class="sidebar-links">
+                    <ul class="list-unstyled">
+                        <li>
+                            <h5>Soccer</h5>
+                        </li>
+                        <li><a href="/today-football-predictions" class="text-decoration-none">Today's Predictions</a></li>
+                        <li><a href="/tomorrow-football-predictions" class="text-decoration-none">Tomorrow's Predictions</a></li>
+                        <!--<li><a href="/live-predictions" class="text-decoration-none">Live Predictions</a></li>-->
+                        <li><a href="/predictions-for-the-week" class="text-decoration-none">Predictions for the Week</a></li>
+                        <li><a href="/football-predictions" class="text-decoration-none">All Predictions</a></li>
+                    </ul>
+
+                    <div class="my-3">
+                        <hr>
+                    </div>
+
+                    <section class="ad-sec mb-5">
+                        <a href="#" class="ad md">
+                            <img src="https://accuratepredict.com/assets/public/images/accurate_predict_right_sidebar.png" alt="Ad Image" class="img-fluid">
+                        </a>
+                    </section>
+                    
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <h5>Popular Leagues</h5>
+                        </li>
+                        <li><a href="/england" class="text-decoration-none"><img src="https://media.api-sports.io/flags/GB.svg" alt="England Flag" width="15" height="15"> England</a></li>
+                        <li><a href="/germany" class="text-decoration-none"><img src="https://media.api-sports.io/flags/DE.svg" alt="Germany Flag" width="15" height="15"> Germany</a></li>
+                        <li><a href="/spain" class="text-decoration-none"><img src="https://media.api-sports.io/flags/ES.svg" alt="Spain Flag" width="15" height="15"> Spain</a></li>
+                        <li><a href="/italy" class="text-decoration-none"><img src="https://media.api-sports.io/flags/IT.svg" alt="Italy Flag" width="15" height="15"> Italy</a></li>
+                        <li><a href="/france" class="text-decoration-none"><img src="https://media.api-sports.io/flags/FR.svg" alt="France Flag" width="15" height="15"> France</a></li>
+                        <li><a href="/portugal" class="text-decoration-none"><img src="https://media.api-sports.io/flags/PT.svg" alt="Portugal Flag" width="15" height="15"> Portugal</a></li>
+                        <li><a href="/netherlands" class="text-decoration-none"><img src="https://media.api-sports.io/flags/NL.svg" alt="Netherlands Flag" width="15" height="15"> Netherlands</a></li>
+                        <li><a href="/turkey" class="text-decoration-none"><img src="https://media.api-sports.io/flags/TR.svg" alt="Turkey Flag" width="15" height="15"> Turkey</a></li>
+                    </ul>
+
+                    <div class="collapse" id="countrylist">
+                        <ul class="list-unstyled">
+                            <li><a href="/afghanistan" class="text-decoration-none"><img src="https://media.api-sports.io/flags/AF.svg" alt="Afghanistan Flag" width="15" height="15"> Afghanistan</a></li>
+                            <li><a href="/albania" class="text-decoration-none"><img src="https://media.api-sports.io/flags/AL.svg" alt="Albania Flag" width="15" height="15"> Albania</a></li>
+                            <li><a href="/algeria" class="text-decoration-none"><img src="https://media.api-sports.io/flags/DZ.svg" alt="Algeria Flag" width="15" height="15"> Algeria</a></li>
+                            <li><a href="/andorra" class="text-decoration-none"><img src="https://media.api-sports.io/flags/AD.svg" alt="Andorra Flag" width="15" height="15"> Andorra</a></li>
+                            <li><a href="/angola" class="text-decoration-none"><img src="https://media.api-sports.io/flags/AO.svg" alt="Angola Flag" width="15" height="15"> Angola</a></li>
+                            <li><a href="/argentina" class="text-decoration-none"><img src="https://media.api-sports.io/flags/AR.svg" alt="Argentina Flag" width="15" height="15"> Argentina</a></li>
+                            <li><a href="/armenia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/AM.svg" alt="Armenia Flag" width="15" height="15"> Armenia</a></li>
+                            <li><a href="/australia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/AU.svg" alt="Australia Flag" width="15" height="15"> Australia</a></li>
+                            <li><a href="/austria" class="text-decoration-none"><img src="https://media.api-sports.io/flags/AT.svg" alt="Austria Flag" width="15" height="15"> Austria</a></li>
+                            <li><a href="/azerbaijan" class="text-decoration-none"><img src="https://media.api-sports.io/flags/AZ.svg" alt="Azerbaijan Flag" width="15" height="15"> Azerbaijan</a></li>
+                            <li><a href="/bahamas" class="text-decoration-none"><img src="https://media.api-sports.io/flags/BS.svg" alt="Bahamas Flag" width="15" height="15"> Bahamas</a></li>
+                            <li><a href="/bahrain" class="text-decoration-none"><img src="https://media.api-sports.io/flags/BH.svg" alt="Bahrain Flag" width="15" height="15"> Bahrain</a></li>
+                            <li><a href="/bangladesh" class="text-decoration-none"><img src="https://media.api-sports.io/flags/BD.svg" alt="Bangladesh Flag" width="15" height="15"> Bangladesh</a></li>
+                            <li><a href="/barbados" class="text-decoration-none"><img src="https://media.api-sports.io/flags/BB.svg" alt="Barbados Flag" width="15" height="15"> Barbados</a></li>
+                            <li><a href="/belarus" class="text-decoration-none"><img src="https://media.api-sports.io/flags/BY.svg" alt="Belarus Flag" width="15" height="15"> Belarus</a></li>
+                            <li><a href="/belgium" class="text-decoration-none"><img src="https://media.api-sports.io/flags/BE.svg" alt="Belgium Flag" width="15" height="15"> Belgium</a></li>
+                            <li><a href="/belize" class="text-decoration-none"><img src="https://media.api-sports.io/flags/BZ.svg" alt="Belize Flag" width="15" height="15"> Belize</a></li>
+                            <li><a href="/benin" class="text-decoration-none"><img src="https://media.api-sports.io/flags/BJ.svg" alt="Benin Flag" width="15" height="15"> Benin</a></li>
+                            <li><a href="/bhutan" class="text-decoration-none"><img src="https://media.api-sports.io/flags/BT.svg" alt="Bhutan Flag" width="15" height="15"> Bhutan</a></li>
+                            <li><a href="/bolivia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/BO.svg" alt="Bolivia Flag" width="15" height="15"> Bolivia</a></li>
+                            <li><a href="/bosnia-and-herzegovina" class="text-decoration-none"><img src="https://media.api-sports.io/flags/BA.svg" alt="Bosnia and Herzegovina Flag" width="15" height="15"> Bosnia and Herzegovina</a></li>
+                            <li><a href="/botswana" class="text-decoration-none"><img src="https://media.api-sports.io/flags/BW.svg" alt="Botswana Flag" width="15" height="15"> Botswana</a></li>
+                            <li><a href="/brazil" class="text-decoration-none"><img src="https://media.api-sports.io/flags/BR.svg" alt="Brazil Flag" width="15" height="15"> Brazil</a></li>
+                            <li><a href="/brunei" class="text-decoration-none"><img src="https://media.api-sports.io/flags/BN.svg" alt="Brunei Flag" width="15" height="15"> Brunei</a></li>
+                            <li><a href="/bulgaria" class="text-decoration-none"><img src="https://media.api-sports.io/flags/BG.svg" alt="Bulgaria Flag" width="15" height="15"> Bulgaria</a></li>
+                            <li><a href="/burkina-faso" class="text-decoration-none"><img src="https://media.api-sports.io/flags/BF.svg" alt="Burkina Faso Flag" width="15" height="15"> Burkina Faso</a></li>
+                            <li><a href="/burundi" class="text-decoration-none"><img src="https://media.api-sports.io/flags/BI.svg" alt="Burundi Flag" width="15" height="15"> Burundi</a></li>
+                            <li><a href="/cabo-verde" class="text-decoration-none"><img src="https://media.api-sports.io/flags/CV.svg" alt="Cabo Verde Flag" width="15" height="15"> Cabo Verde</a></li>
+                            <li><a href="/cambodia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/KH.svg" alt="Cambodia Flag" width="15" height="15"> Cambodia</a></li>
+                            <li><a href="/cameroon" class="text-decoration-none"><img src="https://media.api-sports.io/flags/CM.svg" alt="Cameroon Flag" width="15" height="15"> Cameroon</a></li>
+                            <li><a href="/canada" class="text-decoration-none"><img src="https://media.api-sports.io/flags/CA.svg" alt="Canada Flag" width="15" height="15"> Canada</a></li>
+                            <li><a href="/central-african-republic" class="text-decoration-none"><img src="https://media.api-sports.io/flags/CF.svg" alt="Central African Republic Flag" width="15" height="15"> Central African Republic</a></li>
+                            <li><a href="/chad" class="text-decoration-none"><img src="https://media.api-sports.io/flags/TD.svg" alt="Chad Flag" width="15" height="15"> Chad</a></li>
+                            <li><a href="/chile" class="text-decoration-none"><img src="https://media.api-sports.io/flags/CL.svg" alt="Chile Flag" width="15" height="15"> Chile</a></li>
+                            <li><a href="/china" class="text-decoration-none"><img src="https://media.api-sports.io/flags/CN.svg" alt="China Flag" width="15" height="15"> China</a></li>
+                            <li><a href="/colombia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/CO.svg" alt="Colombia Flag" width="15" height="15"> Colombia</a></li>
+                            <li><a href="/comoros" class="text-decoration-none"><img src="https://media.api-sports.io/flags/CO.svg" alt="Comoros Flag" width="15" height="15"> Comoros</a></li>
+                            <li><a href="/congo" class="text-decoration-none"><img src="https://media.api-sports.io/flags/CG.svg" alt="Congo Flag" width="15" height="15"> Congo</a></li>
+                            <li><a href="/costa-rica" class="text-decoration-none"><img src="https://media.api-sports.io/flags/CR.svg" alt="Costa Rica Flag" width="15" height="15"> Costa Rica</a></li>
+                            <li><a href="/croatia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/HR.svg" alt="Croatia Flag" width="15" height="15"> Croatia</a></li>
+                            <li><a href="/cuba" class="text-decoration-none"><img src="https://media.api-sports.io/flags/CU.svg" alt="Cuba Flag" width="15" height="15"> Cuba</a></li>
+                            <li><a href="/cyprus" class="text-decoration-none"><img src="https://media.api-sports.io/flags/CY.svg" alt="Cyprus Flag" width="15" height="15"> Cyprus</a></li>
+                            <li><a href="/czech-republic" class="text-decoration-none"><img src="https://media.api-sports.io/flags/CZ.svg" alt="Czech Republic Flag" width="15" height="15"> Czech Republic</a></li>
+                            <li><a href="/democratic-republic-of-the-congo" class="text-decoration-none"><img src="https://media.api-sports.io/flags/CD.svg" alt="Democratic Republic of the Congo Flag" width="15" height="15"> Democratic Republic of the Congo</a></li>
+                            <li><a href="/denmark" class="text-decoration-none"><img src="https://media.api-sports.io/flags/DK.svg" alt="Denmark Flag" width="15" height="15"> Denmark</a></li>
+                            <li><a href="/djibouti" class="text-decoration-none"><img src="https://media.api-sports.io/flags/DJ.svg" alt="Djibouti Flag" width="15" height="15"> Djibouti</a></li>
+                            <li><a href="/dominica" class="text-decoration-none"><img src="https://media.api-sports.io/flags/DM.svg" alt="Dominica Flag" width="15" height="15"> Dominica</a></li>
+                            <li><a href="/dominican-republic" class="text-decoration-none"><img src="https://media.api-sports.io/flags/DO.svg" alt="Dominican Republic Flag" width="15" height="15"> Dominican Republic</a></li>
+                            <li><a href="/ecuador" class="text-decoration-none"><img src="https://media.api-sports.io/flags/EC.svg" alt="Ecuador Flag" width="15" height="15"> Ecuador</a></li>
+                            <li><a href="/egypt" class="text-decoration-none"><img src="https://media.api-sports.io/flags/EG.svg" alt="Egypt Flag" width="15" height="15"> Egypt</a></li>
+                            <li><a href="/el-salvador" class="text-decoration-none"><img src="https://media.api-sports.io/flags/SV.svg" alt="El Salvador Flag" width="15" height="15"> El Salvador</a></li>
+                            <li><a href="/equatorial-guinea" class="text-decoration-none"><img src="https://media.api-sports.io/flags/GQ.svg" alt="Equatorial Guinea Flag" width="15" height="15"> Equatorial Guinea</a></li>
+                            <li><a href="/eritrea" class="text-decoration-none"><img src="https://media.api-sports.io/flags/ER.svg" alt="Eritrea Flag" width="15" height="15"> Eritrea</a></li>
+                            <li><a href="/estonia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/EE.svg" alt="Estonia Flag" width="15" height="15"> Estonia</a></li>
+                            <li><a href="/eswatini" class="text-decoration-none"><img src="https://media.api-sports.io/flags/SZ.svg" alt="Eswatini Flag" width="15" height="15"> Eswatini</a></li>
+                            <li><a href="/ethiopia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/ET.svg" alt="Ethiopia Flag" width="15" height="15"> Ethiopia</a></li>
+                            <li><a href="/fiji" class="text-decoration-none"><img src="https://media.api-sports.io/flags/FJ.svg" alt="Fiji Flag" width="15" height="15"> Fiji</a></li>
+                            <li><a href="/finland" class="text-decoration-none"><img src="https://media.api-sports.io/flags/FI.svg" alt="Finland Flag" width="15" height="15"> Finland</a></li>
+                            <li><a href="/france" class="text-decoration-none"><img src="https://media.api-sports.io/flags/FR.svg" alt="France Flag" width="15" height="15"> France</a></li>
+                            <li><a href="/gabon" class="text-decoration-none"><img src="https://media.api-sports.io/flags/GA.svg" alt="Gabon Flag" width="15" height="15"> Gabon</a></li>
+                            <li><a href="/gambia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/GM.svg" alt="Gambia Flag" width="15" height="15"> Gambia</a></li>
+                            <li><a href="/georgia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/GE.svg" alt="Georgia Flag" width="15" height="15"> Georgia</a></li>
+                            <li><a href="/germany" class="text-decoration-none"><img src="https://media.api-sports.io/flags/DE.svg" alt="Germany Flag" width="15" height="15"> Germany</a></li>
+                            <li><a href="/ghana" class="text-decoration-none"><img src="https://media.api-sports.io/flags/GH.svg" alt="Ghana Flag" width="15" height="15"> Ghana</a></li>
+                            <li><a href="/greece" class="text-decoration-none"><img src="https://media.api-sports.io/flags/GR.svg" alt="Greece Flag" width="15" height="15"> Greece</a></li>
+                            <li><a href="/grenada" class="text-decoration-none"><img src="https://media.api-sports.io/flags/GD.svg" alt="Grenada Flag" width="15" height="15"> Grenada</a></li>
+                            <li><a href="/guatemala" class="text-decoration-none"><img src="https://media.api-sports.io/flags/GT.svg" alt="Guatemala Flag" width="15" height="15"> Guatemala</a></li>
+                            <li><a href="/guinea" class="text-decoration-none"><img src="https://media.api-sports.io/flags/GN.svg" alt="Guinea Flag" width="15" height="15"> Guinea</a></li>
+                            <li><a href="/guinea-bissau" class="text-decoration-none"><img src="https://media.api-sports.io/flags/GW.svg" alt="Guinea-Bissau Flag" width="15" height="15"> Guinea-Bissau</a></li>
+                            <li><a href="/guyana" class="text-decoration-none"><img src="https://media.api-sports.io/flags/GY.svg" alt="Guyana Flag" width="15" height="15"> Guyana</a></li>
+                            <li><a href="/haiti" class="text-decoration-none"><img src="https://media.api-sports.io/flags/HT.svg" alt="Haiti Flag" width="15" height="15"> Haiti</a></li>
+                            <li><a href="/honduras" class="text-decoration-none"><img src="https://media.api-sports.io/flags/HN.svg" alt="Honduras Flag" width="15" height="15"> Honduras</a></li>
+                            <li><a href="/hungary" class="text-decoration-none"><img src="https://media.api-sports.io/flags/HU.svg" alt="Hungary Flag" width="15" height="15"> Hungary</a></li>
+                            <li><a href="/iceland" class="text-decoration-none"><img src="https://media.api-sports.io/flags/IS.svg" alt="Iceland Flag" width="15" height="15"> Iceland</a></li>
+                            <li><a href="/india" class="text-decoration-none"><img src="https://media.api-sports.io/flags/IN.svg" alt="India Flag" width="15" height="15"> India</a></li>
+                            <li><a href="/indonesia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/ID.svg" alt="Indonesia Flag" width="15" height="15"> Indonesia</a></li>
+                            <li><a href="/iran" class="text-decoration-none"><img src="https://media.api-sports.io/flags/IR.svg" alt="Iran Flag" width="15" height="15"> Iran</a></li>
+                            <li><a href="/iraq" class="text-decoration-none"><img src="https://media.api-sports.io/flags/IQ.svg" alt="Iraq Flag" width="15" height="15"> Iraq</a></li>
+                            <li><a href="/ireland" class="text-decoration-none"><img src="https://media.api-sports.io/flags/IE.svg" alt="Ireland Flag" width="15" height="15"> Ireland</a></li>
+                            <li><a href="/israel" class="text-decoration-none"><img src="https://media.api-sports.io/flags/IL.svg" alt="Israel Flag" width="15" height="15"> Israel</a></li>
+                            <li><a href="/italy" class="text-decoration-none"><img src="https://media.api-sports.io/flags/IT.svg" alt="Italy Flag" width="15" height="15"> Italy</a></li>
+                            <li><a href="/jamaica" class="text-decoration-none"><img src="https://media.api-sports.io/flags/JM.svg" alt="Jamaica Flag" width="15" height="15"> Jamaica</a></li>
+                            <li><a href="/japan" class="text-decoration-none"><img src="https://media.api-sports.io/flags/JP.svg" alt="Japan Flag" width="15" height="15"> Japan</a></li>
+                            <li><a href="/jordan" class="text-decoration-none"><img src="https://media.api-sports.io/flags/JO.svg" alt="Jordan Flag" width="15" height="15"> Jordan</a></li>
+                            <li><a href="/kazakhstan" class="text-decoration-none"><img src="https://media.api-sports.io/flags/KZ.svg" alt="Kazakhstan Flag" width="15" height="15"> Kazakhstan</a></li>
+                            <li><a href="/kenya" class="text-decoration-none"><img src="https://media.api-sports.io/flags/KE.svg" alt="Kenya Flag" width="15" height="15"> Kenya</a></li>
+                            <li><a href="/kiribati" class="text-decoration-none"><img src="https://media.api-sports.io/flags/KI.svg" alt="Kiribati Flag" width="15" height="15"> Kiribati</a></li>
+                            <li><a href="/korea" class="text-decoration-none"><img src="https://media.api-sports.io/flags/KR.svg" alt="Korea Flag" width="15" height="15"> Korea</a></li>
+                            <li><a href="/kyrgyzstan" class="text-decoration-none"><img src="https://media.api-sports.io/flags/KG.svg" alt="Kyrgyzstan Flag" width="15" height="15"> Kyrgyzstan</a></li>
+                            <li><a href="/laos" class="text-decoration-none"><img src="https://media.api-sports.io/flags/LA.svg" alt="Laos Flag" width="15" height="15"> Laos</a></li>
+                            <li><a href="/latvia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/LV.svg" alt="Latvia Flag" width="15" height="15"> Latvia</a></li>
+                            <li><a href="/lebanon" class="text-decoration-none"><img src="https://media.api-sports.io/flags/LB.svg" alt="Lebanon Flag" width="15" height="15"> Lebanon</a></li>
+                            <li><a href="/lesotho" class="text-decoration-none"><img src="https://media.api-sports.io/flags/LS.svg" alt="Lesotho Flag" width="15" height="15"> Lesotho</a></li>
+                            <li><a href="/liberia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/LR.svg" alt="Liberia Flag" width="15" height="15"> Liberia</a></li>
+                            <li><a href="/libya" class="text-decoration-none"><img src="https://media.api-sports.io/flags/LY.svg" alt="Libya Flag" width="15" height="15"> Libya</a></li>
+                            <li><a href="/liechtenstein" class="text-decoration-none"><img src="https://media.api-sports.io/flags/LI.svg" alt="Liechtenstein Flag" width="15" height="15"> Liechtenstein</a></li>
+                            <li><a href="/lithuania" class="text-decoration-none"><img src="https://media.api-sports.io/flags/LT.svg" alt="Lithuania Flag" width="15" height="15"> Lithuania</a></li>
+                            <li><a href="/luxembourg" class="text-decoration-none"><img src="https://media.api-sports.io/flags/LU.svg" alt="Luxembourg Flag" width="15" height="15"> Luxembourg</a></li>
+                            <li><a href="/madagascar" class="text-decoration-none"><img src="https://media.api-sports.io/flags/MG.svg" alt="Madagascar Flag" width="15" height="15"> Madagascar</a></li>
+                            <li><a href="/malawi" class="text-decoration-none"><img src="https://media.api-sports.io/flags/MW.svg" alt="Malawi Flag" width="15" height="15"> Malawi</a></li>
+                            <li><a href="/malaysia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/MY.svg" alt="Malaysia Flag" width="15" height="15"> Malaysia</a></li>
+                            <li><a href="/maldives" class="text-decoration-none"><img src="https://media.api-sports.io/flags/MV.svg" alt="Maldives Flag" width="15" height="15"> Maldives</a></li>
+                            <li><a href="/mali" class="text-decoration-none"><img src="https://media.api-sports.io/flags/ML.svg" alt="Mali Flag" width="15" height="15"> Mali</a></li>
+                            <li><a href="/malta" class="text-decoration-none"><img src="https://media.api-sports.io/flags/MT.svg" alt="Malta Flag" width="15" height="15"> Malta</a></li>
+                            <li><a href="/marshall-islands" class="text-decoration-none"><img src="https://media.api-sports.io/flags/MH.svg" alt="Marshall Islands Flag" width="15" height="15"> Marshall Islands</a></li>
+                            <li><a href="/mauritania" class="text-decoration-none"><img src="https://media.api-sports.io/flags/MR.svg" alt="Mauritania Flag" width="15" height="15"> Mauritania</a></li>
+                            <li><a href="/mauritius" class="text-decoration-none"><img src="https://media.api-sports.io/flags/MU.svg" alt="Mauritius Flag" width="15" height="15"> Mauritius</a></li>
+                            <li><a href="/mexico" class="text-decoration-none"><img src="https://media.api-sports.io/flags/MX.svg" alt="Mexico Flag" width="15" height="15"> Mexico</a></li>
+                            <li><a href="/micronesia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/FM.svg" alt="Micronesia Flag" width="15" height="15"> Micronesia</a></li>
+                            <li><a href="/moldova" class="text-decoration-none"><img src="https://media.api-sports.io/flags/MD.svg" alt="Moldova Flag" width="15" height="15"> Moldova</a></li>
+                            <li><a href="/monaco" class="text-decoration-none"><img src="https://media.api-sports.io/flags/MC.svg" alt="Monaco Flag" width="15" height="15"> Monaco</a></li>
+                            <li><a href="/mongolia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/MN.svg" alt="Mongolia Flag" width="15" height="15"> Mongolia</a></li>
+                            <li><a href="/montenegro" class="text-decoration-none"><img src="https://media.api-sports.io/flags/ME.svg" alt="Montenegro Flag" width="15" height="15"> Montenegro</a></li>
+                            <li><a href="/morocco" class="text-decoration-none"><img src="https://media.api-sports.io/flags/MA.svg" alt="Morocco Flag" width="15" height="15"> Morocco</a></li>
+                            <li><a href="/mozambique" class="text-decoration-none"><img src="https://media.api-sports.io/flags/MZ.svg" alt="Mozambique Flag" width="15" height="15"> Mozambique</a></li>
+                            <li><a href="/myanmar" class="text-decoration-none"><img src="https://media.api-sports.io/flags/MM.svg" alt="Myanmar Flag" width="15" height="15"> Myanmar</a></li>
+                            <li><a href="/namibia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/NA.svg" alt="Namibia Flag" width="15" height="15"> Namibia</a></li>
+                            <li><a href="/nauru" class="text-decoration-none"><img src="https://media.api-sports.io/flags/NR.svg" alt="Nauru Flag" width="15" height="15"> Nauru</a></li>
+                            <li><a href="/nepal" class="text-decoration-none"><img src="https://media.api-sports.io/flags/NP.svg" alt="Nepal Flag" width="15" height="15"> Nepal</a></li>
+                            <li><a href="/netherlands" class="text-decoration-none"><img src="https://media.api-sports.io/flags/NL.svg" alt="Netherlands Flag" width="15" height="15"> Netherlands</a></li>
+                            <li><a href="/new-zealand" class="text-decoration-none"><img src="https://media.api-sports.io/flags/NZ.svg" alt="New Zealand Flag" width="15" height="15"> New Zealand</a></li>
+                            <li><a href="/nicaragua" class="text-decoration-none"><img src="https://media.api-sports.io/flags/NI.svg" alt="Nicaragua Flag" width="15" height="15"> Nicaragua</a></li>
+                            <li><a href="/niger" class="text-decoration-none"><img src="https://media.api-sports.io/flags/NE.svg" alt="Niger Flag" width="15" height="15"> Niger</a></li>
+                            <li><a href="/nigeria" class="text-decoration-none"><img src="https://media.api-sports.io/flags/NG.svg" alt="Nigeria Flag" width="15" height="15"> Nigeria</a></li>
+                            <li><a href="/north-macedonia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/MK.svg" alt="North Macedonia Flag" width="15" height="15"> North Macedonia</a></li>
+                            <li><a href="/norway" class="text-decoration-none"><img src="https://media.api-sports.io/flags/NO.svg" alt="Norway Flag" width="15" height="15"> Norway</a></li>
+                            <li><a href="/oman" class="text-decoration-none"><img src="https://media.api-sports.io/flags/OM.svg" alt="Oman Flag" width="15" height="15"> Oman</a></li>
+                            <li><a href="/pakistan" class="text-decoration-none"><img src="https://media.api-sports.io/flags/PK.svg" alt="Pakistan Flag" width="15" height="15"> Pakistan</a></li>
+                            <li><a href="/palau" class="text-decoration-none"><img src="https://media.api-sports.io/flags/PW.svg" alt="Palau Flag" width="15" height="15"> Palau</a></li>
+                            <li><a href="/palestine" class="text-decoration-none"><img src="https://media.api-sports.io/flags/PS.svg" alt="Palestine Flag" width="15" height="15"> Palestine</a></li>
+                            <li><a href="/panama" class="text-decoration-none"><img src="https://media.api-sports.io/flags/PA.svg" alt="Panama Flag" width="15" height="15"> Panama</a></li>
+                            <li><a href="/papua-new-guinea" class="text-decoration-none"><img src="https://media.api-sports.io/flags/PG.svg" alt="Papua New Guinea Flag" width="15" height="15"> Papua New Guinea</a></li>
+                            <li><a href="/paraguay" class="text-decoration-none"><img src="https://media.api-sports.io/flags/PY.svg" alt="Paraguay Flag" width="15" height="15"> Paraguay</a></li>
+                            <li><a href="/peru" class="text-decoration-none"><img src="https://media.api-sports.io/flags/PE.svg" alt="Peru Flag" width="15" height="15"> Peru</a></li>
+                            <li><a href="/philippines" class="text-decoration-none"><img src="https://media.api-sports.io/flags/PH.svg" alt="Philippines Flag" width="15" height="15"> Philippines</a></li>
+                            <li><a href="/poland" class="text-decoration-none"><img src="https://media.api-sports.io/flags/PL.svg" alt="Poland Flag" width="15" height="15"> Poland</a></li>
+                            <li><a href="/portugal" class="text-decoration-none"><img src="https://media.api-sports.io/flags/PT.svg" alt="Portugal Flag" width="15" height="15"> Portugal</a></li>
+                            <li><a href="/qatar" class="text-decoration-none"><img src="https://media.api-sports.io/flags/QA.svg" alt="Qatar Flag" width="15" height="15"> Qatar</a></li>
+                            <li><a href="/romania" class="text-decoration-none"><img src="https://media.api-sports.io/flags/RO.svg" alt="Romania Flag" width="15" height="15"> Romania</a></li>
+                            <li><a href="/russia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/RU.svg" alt="Russia Flag" width="15" height="15"> Russia</a></li>
+                            <li><a href="/rwanda" class="text-decoration-none"><img src="https://media.api-sports.io/flags/RW.svg" alt="Rwanda Flag" width="15" height="15"> Rwanda</a></li>
+                            <li><a href="/saudi-arabia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/SA.svg" alt="Saudi Arabia Flag" width="15" height="15"> Saudi Arabia</a></li>
+                            <li><a href="/senegal" class="text-decoration-none"><img src="https://media.api-sports.io/flags/SN.svg" alt="Senegal Flag" width="15" height="15"> Senegal</a></li>
+                            <li><a href="/serbia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/RS.svg" alt="Serbia Flag" width="15" height="15"> Serbia</a></li>
+                            <li><a href="/singapore" class="text-decoration-none"><img src="https://media.api-sports.io/flags/SG.svg" alt="Singapore Flag" width="15" height="15"> Singapore</a></li>
+                            <li><a href="/slovakia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/SK.svg" alt="Slovakia Flag" width="15" height="15"> Slovakia</a></li>
+                            <li><a href="/slovenia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/SI.svg" alt="Slovenia Flag" width="15" height="15"> Slovenia</a></li>
+                            <li><a href="/solomon-islands" class="text-decoration-none"><img src="https://media.api-sports.io/flags/SB.svg" alt="Solomon Islands Flag" width="15" height="15"> Solomon Islands</a></li>
+                            <li><a href="/south-africa" class="text-decoration-none"><img src="https://media.api-sports.io/flags/ZA.svg" alt="South Africa Flag" width="15" height="15"> South Africa</a></li>
+                            <li><a href="/south-korea" class="text-decoration-none"><img src="https://media.api-sports.io/flags/KR.svg" alt="South Korea Flag" width="15" height="15"> South Korea</a></li>
+                            <li><a href="/spain" class="text-decoration-none"><img src="https://media.api-sports.io/flags/ES.svg" alt="Spain Flag" width="15" height="15"> Spain</a></li>
+                            <li><a href="/sri-lanka" class="text-decoration-none"><img src="https://media.api-sports.io/flags/LK.svg" alt="Sri Lanka Flag" width="15" height="15"> Sri Lanka</a></li>
+                            <li><a href="/sweden" class="text-decoration-none"><img src="https://media.api-sports.io/flags/SE.svg" alt="Sweden Flag" width="15" height="15"> Sweden</a></li>
+                            <li><a href="/switzerland" class="text-decoration-none"><img src="https://media.api-sports.io/flags/CH.svg" alt="Switzerland Flag" width="15" height="15"> Switzerland</a></li>
+                            <li><a href="/tajikistan" class="text-decoration-none"><img src="https://media.api-sports.io/flags/TJ.svg" alt="Tajikistan Flag" width="15" height="15"> Tajikistan</a></li>
+                            <li><a href="/tanzania" class="text-decoration-none"><img src="https://media.api-sports.io/flags/TZ.svg" alt="Tanzania Flag" width="15" height="15"> Tanzania</a></li>
+                            <li><a href="/thailand" class="text-decoration-none"><img src="https://media.api-sports.io/flags/TH.svg" alt="Thailand Flag" width="15" height="15"> Thailand</a></li>
+                            <li><a href="/togo" class="text-decoration-none"><img src="https://media.api-sports.io/flags/TG.svg" alt="Togo Flag" width="15" height="15"> Togo</a></li>
+                            <li><a href="/tonga" class="text-decoration-none"><img src="https://media.api-sports.io/flags/TN.svg" alt="Tonga Flag" width="15" height="15"> Tonga</a></li>
+                            <li><a href="/trinidad-and-tobago" class="text-decoration-none"><img src="https://media.api-sports.io/flags/TT.svg" alt="Trinidad and Tobago Flag" width="15" height="15"> Trinidad and Tobago</a></li>
+                            <li><a href="/tunisia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/TN.svg" alt="Tunisia Flag" width="15" height="15"> Tunisia</a></li>
+                            <li><a href="/turkey" class="text-decoration-none"><img src="https://media.api-sports.io/flags/TR.svg" alt="Turkey Flag" width="15" height="15"> Turkey</a></li>
+                            <li><a href="/turkmenistan" class="text-decoration-none"><img src="media.api-sports.io/flags/TM.svg" alt="Turkmenistan Flag" width="15" height="15"> Turkmenistan</a></li>
+                            <li><a href="/tuvalu" class="text-decoration-none"><img src="https://media.api-sports.io/flags-TV.svg" alt="Tuvalu Flag" width="15" height="15"> Tuvalu</a></li>
+                            <li><a href="/uganda" class="text-decoration-none"><img src="https://media.api-sports.io/flags/UG.svg" alt="Uganda Flag" width="15" height="15"> Uganda</a></li>
+                            <li><a href="/ukraine" class="text-decoration-none"><img src="https://media.api-sports.io/flags/UA.svg" alt="Ukraine Flag" width="15" height="15"> Ukraine</a></li>
+                            <li><a href="/united-arab-emirates" class="text-decoration-none"><img src="https://media.api-sports.io/flags/AE.svg" alt="United Arab Emirates Flag" width="15" height="15"> United Arab Emirates</a></li>
+                            <li><a href="/united-kingdom" class="text-decoration-none"><img src="https://media.api-sports.io/flags/GB.svg" alt="United Kingdom Flag" width="15" height="15"> United Kingdom</a></li>
+                            <li><a href="/united-states" class="text-decoration-none"><img src="https://media.api-sports.io/flags/US.svg" alt="United States Flag" width="15" height="15"> United States</a></li>
+                            <li><a href="/uruguay" class="text-decoration-none"><img src="https://media.api-sports.io/flags/UY.svg" alt="Uruguay Flag" width="15" height="15"> Uruguay</a></li>
+                            <li><a href="/uzbekistan" class="text-decoration-none"><img src="https://media.api-sports.io/flags/UZ.svg" alt="Uzbekistan Flag" width="15" height="15"> Uzbekistan</a></li>
+                            <li><a href="/vanuatu" class="text-decoration-none"><img src="https://media.api-sports.io/flags/VU.svg" alt="Vanuatu Flag" width="15" height="15"> Vanuatu</a></    li>
+                            <li><a href="/venezuela" class="text-decoration-none"><img src="https://media.api-sports.io/flags/VE.svg" alt="Venezuela Flag" width="15" height="15"> Venezuela</a></li>
+                            <li><a href="/vietnam" class="text-decoration-none"><img src="https://media.api-sports.io/flags/VN.svg" alt="Vietnam Flag" width="15" height="15"> Vietnam</a></li>
+                            <li><a href="/yemen" class="text-decoration-none"><img src="https://media.api-sports.io/flags/YE.svg" alt="Yemen Flag" width="15" height="15"> Yemen</a></li>
+                            <li><a href="/zambia" class="text-decoration-none"><img src="https://media.api-sports.io/flags/ZM.svg" alt="Zambia Flag" width="15" height="15"> Zambia</a></li>
+                            <li><a href="/zimbabwe" class="text-decoration-none"><img src="https://media.api-sports.io/flags/ZW.svg" alt="Zimbabwe Flag" width="15" height="15"> Zimbabwe</a></li>
+                                             
+                        </ul>
+                    </div>
+                    
+                    <div class="d-grid mt-3">
+                        <a class="btn btn-primary-inverted btn-sm justify-content-center" data-bs-toggle="collapse" href="#countrylist" role="button" aria-expanded="false" aria-controls="countrylist">
+                            Show More A-Z
+                        </a>
+                    </div>
+                    
+                </section>
+
+                <!-- main body -->
+                 <section class="main">
+                    <section class="banner">
+                        <div id="carousel" class="carousel slide pointer-event" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <a href="/" target="_blank">
+                                        <picture>
+                                            <source media="(max-width:650px)" srcset="./assets/images/accurate_predict_banner1.jpg">
+                                            <img src="./assets/images/accurate_predict_banner1.jpg" class="d-block w-100" alt="Best prediction site for football in the world">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="/" target="_blank">
+                                        <picture>
+                                            <source media="(max-width:650px)" srcset="./assets/images/accurate_predict_banner.png">
+                                            <img src="./assets/images/accurate_predict_banner.png" class="d-block w-100" alt="Best soccer prediction site in the world">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="/" target="_blank">
+                                        <picture>
+                                            <source media="(max-width:650px)" srcset="./assets/images/accurate_predict_banner_2.png">
+                                            <img src="./assets/images/accurate_predict_banner_2.png" class="d-block w-100" alt="Best Free Football Prediction Site in the World">
+                                        </picture>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                            
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+                                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="site-title">
+                        <h2>We are the Best Free Prediction Site for Football in the world.</h2>
+                    </section>
+                    
+                 </section>
+
+                 <section class="sidebar-extra">
+                    <section class="calendar-cont">
+                        <div class="date_main-placeholder hasDatepicker" id="dp1729947405777">
+                            <div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;">
+                                <div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all">
+                                    <a class="ui-datepicker-prev ui-corner-all ui-state-disabled" title="">
+                                        <span class="ui-icon ui-icon-circle-triangle-w"></span>
+                                    </a>
+                                    <a class="ui-datepicker-next ui-corner-all" data-handler="next" data-event="click" title=""><span class="ui-icon ui-icon-circle-triangle-e"></span>
+                                    </a>
+                                    <div class="ui-datepicker-title">
+                                        <span class="ui-datepicker-month">October</span>&nbsp;<span class="ui-datepicker-year">2024</span>
+                                    </div>
+                                </div>
+                                <table class="ui-datepicker-calendar">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="ui-datepicker-week-end"><span title="Sunday">Su</span></th>
+                                            <th scope="col"><span title="Monday">Mo</span></th>
+                                            <th scope="col"><span title="Tuesday">Tu</span></th>
+                                            <th scope="col"><span title="Wednesday">We</span></th>
+                                            <th scope="col"><span title="Thursday">Th</span></th>
+                                            <th scope="col"><span title="Friday">Fr</span></th>
+                                            <th scope="col" class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                            <td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">1</span></td>
+                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">2</span></td>
+                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">3</span></td>
+                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">4</span></td>
+                                            <td class="ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">5</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">6</span></td>
+                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">7</span></td>
+                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">8</span></td>
+                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">9</span></td>
+                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">10</span></td>
+                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">11</span></td>
+                                            <td class="ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">12</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">13</span></td>
+                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">14</span></td>
+                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">15</span></td>
+                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">16</span></td>
+                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">17</span></td>
+                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">18</span></td>
+                                            <td class="ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">19</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ui-datepicker-week-end ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">20</span></td>
+                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">21</span></td>
+                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">22</span></td>
+                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">23</span></td>
+                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">24</span></td>
+                                            <td class="ui-datepicker-unselectable ui-state-disabled "><span class="ui-state-default">25</span></td>
+                                            <td class="ui-datepicker-week-end ui-datepicker-days-cell-over ui-datepicker-current-day ui-datepicker-today" data-handler="selectDay" data-event="click" data-month="9" data-year="2024">
+                                                <a class="ui-state-default ui-state-highlight ui-state-active" href="#" aria-current="true" data-date="26">26</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="ui-datepicker-week-end " data-handler="selectDay" data-event="click" data-month="9" data-year="2024">
+                                                <a class="ui-state-default" href="#" aria-current="false" data-date="27">27</a>
+                                            </td>
+                                            <td class="" data-handler="selectDay" data-event="click" data-month="9" data-year="2024">
+                                                <a class="ui-state-default" href="#" aria-current="false" data-date="28">28</a>
+                                            </td>
+                                            <td class="" data-handler="selectDay" data-event="click" data-month="9" data-year="2024">
+                                                <a class="ui-state-default" href="#" aria-current="false" data-date="29">29</a>
+                                            </td>
+                                            <td class="" data-handler="selectDay" data-event="click" data-month="9" data-year="2024">
+                                                <a class="ui-state-default" href="#" aria-current="false" data-date="30">30</a>
+                                            </td>
+                                            <td class="" data-handler="selectDay" data-event="click" data-month="9" data-year="2024">
+                                                <a class="ui-state-default" href="#" aria-current="false" data-date="31">31</a>
+                                            </td>
+                                            <td class="ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                            <td class="ui-datepicker-week-end ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="code-conv-search">
+                        <div class="code-conv-search_sec-title">
+                            <div class="content">
+                                <h4>Convert Code</h4>
+                                <p>Please make one or more selections in order to place.</p>
+                            </div>
+                        </div>
+                        <form action="#" method="POST">
+                            <input type="hidden" name="_token" value="kQi0psDQ22SE70pcw3ZE1NU2DQBXx6kmgcbrcJTo">
+                            
+                            <label for="code_converter_booking_code" class="form-label">
+                                <input type="text" class="form-control" id="code_converter_booking_code" name="code_converter_booking_code" placeholder="Enter Booking Code" required>
+                            </label>
+
+                            <label for="convert-from-field" class="form-label">
+                                <select class="form-select form-control" id="convert-from-field" name="code_converter_convert_from" data-placeholder="Convert From" required>
+                                    <option value="" selected disabled>Convert From</option>
+                                    <option value="1xbet:ke">1xbet - Kenya</option>
+                                    <option value="1xbet:ng">1xbet - Nigeria</option>
+                                    <option value="1xbet:ug">1xbet - Uganda</option>
+                                    <option value="22bet">22bet</option>
+                                    <option value="bet9ja">bet9ja</option>
+                                    <option value="betking:ng">betking - Nigeria</option>
+                                    <option value="betway:ke">betway - Kenya</option>
+                                    <option value="betway:ng">betway - Nigeria</option>
+                                    <option value="betway:za">betway - South Africa</option>
+                                    <option value="betwinner">betwinner</option>
+                                    <option value="betwinner:ng">betwinner - Nigeria</option>
+                                    <option value="melbet">melbet</option>
+                                    <option value="paripesa">paripesa</option>
+                                    <option value="sportybet:gh">sportybet - Ghana</option>
+                                    <option value="sportybet:ng">sportybet - Nigeria</option>
+                                </select>
+                            </label>
+                            
+                            <label for="convert-to-field" class="form-label">
+                                <select class="form-select form-control" id="convert-to-field" name="code_converter_convert_to" data-placeholder="Convert To" required>
+                                    <option value="" selected disabled>Convert To</option>
+                                    <option value="1xbet:ke">1xbet - Kenya</option>
+                                    <option value="1xbet:ng">1xbet - Nigeria</option>
+                                    <option value="1xbet:ug">1xbet - Uganda</option>
+                                    <option value="22bet">22bet</option>
+                                    <option value="bet9ja">bet9ja</option>
+                                    <option value="betking:ng">betking - Nigeria</option>
+                                    <option value="betway:ke">betway - Kenya</option>
+                                    <option value="betway:ng">betway - Nigeria</option>
+                                    <option value="betway:za">betway - South Africa</option>
+                                    <option value="betwinner">betwinner</option>
+                                    <option value="betwinner:ng">betwinner - Nigeria</option>
+                                    <option value="melbet">melbet</option>
+                                    <option value="paripesa">paripesa</option>
+                                    <option value="sportybet:gh">sportybet - Ghana</option>
+                                    <option value="sportybet:ng">sportybet - Nigeria</option>
+                                </select>
+                            </label>
+                            
+                            <div>
+                                <span class="badge bg-danger" id="covert_code_form_error" style="display:none"></span>
+                            </div>
+                            
+                            <div class="cta-action d-grid">
+                                <button type="submit" class="btn btn-primary-inverted justify-content-center">Convert Code</button>
+                            </div>
+                        </form>
+                    </section>
+                    
+                    
+                 </section>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <div class="container-fluid position-fixed bottom-0" id="telegram" style="background: rgb(255, 0, 0); opacity: 1;">
+        <div class="d-flex align-items-center justify-content-center p-1 tel-content">
+            <span class="text-white message-text">Join our Telegram channel</span>
+            
+            <div class="term-message-wrapper">
+                <a href="/" target="_blank" class="btn btn-sm rounded-pill">Join now</a>
+            </div>
+            
+            <div class="text-white mt-2 d-none pb-tks-message">
+                Thank you. We will get back to you soon.
+            </div>
+            <div class="text-white mt-2 d-none pb-tks-message-sharing">
+                Thank you for sharing. Please use the coupon at checkout.
+            </div>
+        </div>
+        <button type="button" class="btn-close position-absolute top-50 end-0 translate-middle-y" aria-label="Close"></button>
+    </div>
+
+    <div class="position-fixed zb-sp-trigger">
+        <div class="ztb-sp-tabbutton">
+            <div id="ztb-sp-show-widget" class=" ztb-sp-tabicon d-flex rounded">
+            
+                <div class="d-flex align-items-center zb-tab-content">
+                    <span class="zb-tab-text-icon"><i class="fa fa-gift"></i></span>
+                    <span class="zb-tab-text">Special Offer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    //     $(document).ready(function() {
+    //     $("#dp1729947405777").datepicker({
+    //         inline: true,
+    //         onSelect: function(dateText) {
+    //             console.log("Selected date: " + dateText);
+    //         }
+    //     });
+
+    //     $(document).on("click", ".ui-datepicker-next", function() {
+    //         console.log("Next button clicked");
+    //     });
+    // });
+    </script>    
+
+<script src="./assets/js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<!-- Include jQuery and Select2 CSS/JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,215 @@
+.container {
+    max-width: 1210px;
+}
+
+main.main-cont {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+/* sidebar */
+main section.sidebar-links {
+    width: 16%;
+    flex: 0 0 auto;
+}
+
+.sidebar-links ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar-links ul li h5 {
+    text-transform: uppercase;
+    opacity: 0.4;
+    font-size: 0.85rem;
+    color: var(--accpre-sidbar-title-color);
+}
+
+.sidebar-links ul li {
+    padding-bottom: 1rem;
+}
+
+.sidebar-links ul li a {
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--accpre-sidbar-link-color);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+
+.sidebar-links ul li a:hover{
+    color: var(--accpre-header-bg);
+}
+
+/* main body */
+main section.main {
+    flex: 0 0 auto;
+    width: 62%;
+}
+
+.banner {
+    position: relative;
+    border-radius: 0.5rem;
+}
+
+.main .site-title {
+    padding: var(--spc-4) 0 var(--spc-3);
+    text-align: center;
+}
+
+.main h2{
+    font-size: 1.5rem !important;
+}
+
+
+/* extra */
+main section.sidebar-extra {
+    width: 22%;
+    flex: 0 0 auto;
+}
+
+.calendar-cont {
+    background: var(--accpre-container-bg);
+    padding: var(--spc-2) var(--spc-2) var(--spc-2);
+    border-radius: var(--accpre-border-radius-lg);
+    margin-top: var(--spc-4);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.04);
+}
+  
+.ui-widget.ui-widget-content.ui-datepicker {
+    border-radius: var(--accpre-border-radius-sm);
+    background: none;
+    border: none;
+    width: 100%;
+    font-family: var(--accpre-body-font-family);
+}
+
+
+.ui-widget.ui-widget-content.ui-datepicker .ui-widget-header {
+    background: var(--accpre-cal-table-th);
+    border: none;
+    display: flex;
+    padding: var(--spc-2);
+    align-items: center;
+    justify-content: center;
+}
+
+/* .ui-widget.ui-widget-content.ui-datepicker .ui-widget-header .ui-corner-all .ui-icon {
+    background: var(--accpre-header-bg);
+    cursor: pointer;
+} */
+ui-widget.ui-widget-content.ui-datepicker * {
+    font-family: var(--accpre-body-font-family);
+}
+
+.ui-widget.ui-widget-content.ui-datepicker .ui-datepicker-calendar td a {
+    background: none;
+    border: none;
+    width: 32px;
+    height: 32px;
+    line-height: 30px;
+    border-radius: var(--accpre-border-radius-lg);
+    text-align: center;
+    transition: all ease-in-out 0.2s;
+    display: block;
+    text-decoration: none;
+    color: var(--accpre-cal-col);
+    margin: 0 auto;
+}
+
+.ui-widget.ui-widget-content.ui-datepicker .ui-datepicker-calendar td a.ui-state-active {
+    background: var(--accpre-primary-500);
+    color: var(--accpre-gray-50);
+}
+
+.sidebar-extra .code-conv-search {
+    background: var(--accpre-container-bg);
+    padding: var(--spc-2) var(--spc-2) var(--spc-2);
+    border-radius: var(--accpre-border-radius-lg);
+    margin-top: var(--spc-4);
+    margin-bottom: var(--spc-1);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.04);
+}
+
+.sidebar-extra .code-conv-search .code-conv-search_sec-title {
+    background: var(--accpre-primary-500) url(../images/bet.jpeg) right center no-repeat;
+    background-size: auto 20%;
+    padding: var(--spc-4) var(--spc-2) var(--spc-3) var(--spc-3);
+    border-radius: var(--accpre-border-radius-sm);
+    overflow: hidden;
+}
+
+.sidebar-extra .code-conv-search .code-conv-search_sec-title .content {
+    width: 70%;
+}
+
+.sidebar-extra .code-conv-search .code-conv-search_sec-title .content h4 {
+    color: var(--accpre-gray-100);
+}
+
+.sidebar-extra .code-conv-search .code-conv-search_sec-title .content p {
+    font-size: 0.9rem;
+    color: var(--accpre-gray-100);
+}
+
+.sidebar-extra .code-conv-search form {
+    margin-top: var(--spc-3);
+}
+
+.sidebar-extra .code-conv-search form label {
+    width: 100%;
+    margin-bottom: 0.8rem;
+}
+
+.code-conv-search .form-control,
+.code-conv-search .form-select {
+    height: 42px;
+    padding: 0px 12px;
+    box-shadow: none;
+}
+
+.code-conv-search .form-control::placeholder,
+.code-conv-search .form-select::placeholder {
+    color: var(--accpre-select-color);
+}
+.select2-container--bootstrap-5 .select2-selection__placeholder {
+    color: var(--accpre-select-color) !important;
+}
+
+.sidebar-extra .code-conv-search .cta-action {
+    margin-top: var(--spc-2);
+    height: 42px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1199.98px) {
+    main section.sidebar-links {
+        width: 20%;
+    }
+
+    main section.main {
+        width: 80%;
+        
+    }
+    main section.sidebar-extra {
+        display: none;
+    }
+}
+
+@media (max-width: 1399.98px) {
+    .sidebar-extra .code-conv-search .code-conv-search_sec-title .content {
+        width: 75%;
+    }
+}
