@@ -324,6 +324,24 @@ header.primary .navbar.navbar-expand-lg .container .navbar-nav .nav-item.dropdow
     color: #ffffff !important;
 }
 
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .zb-sp-trigger .ztb-sp-tabbutton {
+        height: auto !important;
+        line-height: 23px !important;
+    }
+
+    .zb-sp-trigger .zb-tab-content .zb-tab-text-icon {
+        font-size: 18px !important;
+    }
+}
+
 @media (min-width: 992px) {
     header.primary .navbar.navbar-expand-lg .container .mobile-account {
         display: none;
@@ -339,4 +357,54 @@ header.primary .navbar.navbar-expand-lg .container .navbar-nav .nav-item.dropdow
         background: none;
         border: none;
     }
+
+    #telegram .tel-content {
+        gap: 5px;
+    }
+
+    #telegram .tel-content, #telegram .rounded-pill {
+        font-size: 14px;
+        gap: 5px;
+    }
+
+    .zb-sp-trigger {
+        left: auto !important;
+        right: 20px !important;
+        top: auto !important;
+        bottom: 50px !important;
+        width: 50px !important;
+        -moz-transform: rotate(0deg) !important;
+        -webkit-transform: rotate(0deg) !important;
+        transform: rotate(0deg) !important;
+        border-radius: 50% !important;
+        -moz-border-radius: 50% !important;
+        -webkit-border-radius: 50% !important;
+        box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.15) inset, 0px 2px 11px rgba(128, 128, 128, 0.4);
+        -moz-box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.15) inset, 0px 2px 11px rgba(128, 128, 128, 0.4);
+        -webkit-box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.15) inset, 0px 2px 11px rgba(128, 128, 128, 0.4);
+    }
+
+    .zb-sp-trigger .zb-tab-content .zb-tab-text  {
+        display: none !important;
+    }
+
+    .zb-sp-trigger .ztb-sp-tabicon {
+        display: block;
+    }
+
+    .zb-sp-trigger .ztb-sp-tabbutton {
+        border-radius: 50% !important;
+        width: 50px !important;
+        height: 50px !important;
+        padding: 8px 6px !important;
+        
+    }
+
+    .ztb-sp-tabicon {
+        border: none;
+    }
+
+    #telegram .btn-close{
+        margin-right: 10px;
+     }
 }
